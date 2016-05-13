@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
     User = require('./usermodel');
 
 exports.signup = function(req, res) {
-    if (!req.body.name || !req.body.password) {
+    if (!req.body.email || !req.body.password) {
         res.json({ succes: false, msg: 'Please pass name and password.' });
     } else {
         var newUser = new User({
@@ -24,7 +24,7 @@ exports.signup = function(req, res) {
 
 exports.authenticate = function(req, res) {
     User.findOne({
-        name: req.body.name
+        name: req.body.email
     }, function(err, user) {
         if (err) throw err;
 
