@@ -32,7 +32,15 @@ var UserSchema = new Schema({
         token: String,
         email: String,
         name: String
-    }
+    },
+    postedBooks:[{
+        type: Schema.ObjectId,
+        ref: 'PostBook'
+    }],
+    requestedBooks:[{
+        type: Schema.ObjectId,
+        ref: 'RequestBook'
+    }]
 });
 
 UserSchema.pre('save', function(next) {

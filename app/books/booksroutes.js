@@ -16,6 +16,19 @@ bookRoutes.post('/search',
 		 passport.authenticate('jwt', { session: false }),
 		 BookController.search);
 
+bookRoutes.post('/postbook',
+		 passport.authenticate('jwt', { session: false }),
+		 BookController.postBook);
+
+bookRoutes.post('/requestbook',
+		 passport.authenticate('jwt', { session: false }),
+		 BookController.requestBook);
+
+bookRoutes.post('/userhistory',
+		 passport.authenticate('jwt', { session: false }),
+		 BookController.userHistory);
+
+
 bookRoutes.post('/savecategory',
 		 passport.authenticate('jwt', { session: false }),
 		 BookController.createCategory);

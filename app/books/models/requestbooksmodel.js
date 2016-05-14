@@ -16,12 +16,10 @@ var RequestBookSchema = new Schema({
     },
     requestdate: {
         type: Date,
-        required: true
+        default:Date.now,
     },
     status: {
-        type: String,
-        required: true
-    }
+        type: String    }
 });
 
 module.exports = mongoose.model('RequestBook', RequestBookSchema);

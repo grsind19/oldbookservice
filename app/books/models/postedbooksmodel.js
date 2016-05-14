@@ -10,17 +10,25 @@ var PostBookSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Book'
     },
+    author:{
+        type:String
+    },
+    mobile:{
+        type:String
+    },
+    address:{
+        type:String
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
     postdate: {
         type: Date,
-        required: true
+        default:Date.now,
     },
     status: {
         type: String,
-        required: true
     }
 });
 

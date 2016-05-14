@@ -63,4 +63,4 @@ app.use('/api', require('./app/books/booksroutes.js'));
 
 // Start the server
 app.listen(port);
-console.log('There will be dragons: http://localhost:' + port);
+console.log('Old book api is running on: http://localhost:' + port);

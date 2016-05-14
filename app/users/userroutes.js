@@ -15,6 +15,8 @@ apiRoutes.get('/memberinfo',
 		 passport.authenticate('jwt', { session: false }),
 		 UserController.memberinfo);
 
-
+apiRoutes.post('/changepwd',
+		 passport.authenticate('jwt', { session: false }),
+		 UserController.changepwd);
 
 module.exports = apiRoutes;
